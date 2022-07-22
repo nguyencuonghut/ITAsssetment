@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Carbon\Carbon;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -21,8 +22,8 @@ class UsersTableSeeder extends Seeder
             0 =>
                 array (
                     'id' => 1,
-                    'name' => 'Mr.Vương',
-                    'email' => 'vuongtanlong@gmail.com',
+                    'name' => 'Admin',
+                    'email' => 'nguyenvancuong@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
@@ -32,19 +33,19 @@ class UsersTableSeeder extends Seeder
             1 =>
                 array (
                     'id' => 2,
-                    'name' => 'Ms.Mơ',
-                    'email' => 'mo@gmail.com',
+                    'name' => 'Phạm Hồng Hải',
+                    'email' => 'phamhonghai@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
-            ),
+                ),
             2 =>
                 array (
                     'id' => 3,
-                    'name' => 'Mr.Thường',
-                    'email' => 'teddy.dang@cj.net',
+                    'name' => 'Phạm Thị Trang',
+                    'email' => 'phamthitrang@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
@@ -54,8 +55,8 @@ class UsersTableSeeder extends Seeder
             3 =>
                 array (
                     'id' => 4,
-                    'name' => 'Ms.Ngan',
-                    'email' => 'thinga.tran@gmail.com',
+                    'name' => 'Tạ Văn Toại',
+                    'email' => 'tavantoai@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
@@ -65,8 +66,8 @@ class UsersTableSeeder extends Seeder
             4 =>
                 array (
                     'id' => 5,
-                    'name' => 'Ms.Huong',
-                    'email' => 'huong.crossland@gmail.com',
+                    'name' => 'Đỗ Minh Vương',
+                    'email' => 'dominhvuong@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
@@ -76,8 +77,8 @@ class UsersTableSeeder extends Seeder
             5 =>
                 array (
                     'id' => 6,
-                    'name' => 'Mr.Long',
-                    'email' => 'long.enerfo@gmail.com',
+                    'name' => 'Triệu Thị Hương',
+                    'email' => 'triethihuong@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
@@ -87,25 +88,14 @@ class UsersTableSeeder extends Seeder
             6 =>
                 array (
                     'id' => 7,
-                    'name' => 'Ms.Tina',
-                    'email' => 'tina-acc@gmail.com',
+                    'name' => 'Lê Thị Hồng',
+                    'email' => 'lethihong@honghafeed.com.vn',
                     'password' => bcrypt('Hongha@123'),
                     'email_verified_at' => null,
                     'remember_token' => null,
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
-                ),
-            7 =>
-                array (
-                    'id' => 8,
-                    'name' => 'Ms.Ngọc',
-                    'email' => 'ngoc.samaco@gmail.com',
-                    'password' => bcrypt('Hongha@123'),
-                    'email_verified_at' => null,
-                    'remember_token' => null,
-                    'created_at' => Carbon::now(),
-                    'updated_at' => Carbon::now(),
-                ),
+                )
         ));
     }
 }

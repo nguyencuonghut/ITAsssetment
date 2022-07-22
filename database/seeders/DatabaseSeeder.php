@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             SuppliersTableSeeder::class,
             EmployeesTableSeeder::class,
             AssetModelsTableSeeder::class,
+            AssetsTableSeeder::class,
         ]);
     }
 }
