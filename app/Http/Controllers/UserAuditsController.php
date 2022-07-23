@@ -55,7 +55,7 @@ class UserAuditsController extends Controller
 
     public function anyData()
     {
-        $asset_audits = AssetAudit::with(['employee', 'asset'])->select(['id', 'employee_id', 'asset_id', 'result', 'request_time', 'confirmation_time'])->orderBy('request_time')->get();
+        $asset_audits = AssetAudit::with(['employee', 'asset'])->select(['id', 'employee_id', 'asset_id', 'result', 'request_time', 'confirmation_time'])->orderBy('request_time', 'desc')->get();
         return Datatables::of($asset_audits)
             ->addIndexColumn()
             ->editColumn('employee', function ($asset_audits) {

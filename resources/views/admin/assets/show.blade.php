@@ -142,8 +142,8 @@
                                         <td><span class="badge badge-dark">{{$item->status}}</span></td>
                                         @endif
                                         <td>{{$item->asset->tag}}</td>
-                                        <td>{{$item->old_employee->email}}</td>
-                                        <td>{{$item->new_employee->email}}</td>
+                                        <td>{{$item->old_employee->name}}</td>
+                                        <td>{{$item->new_employee->name}}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -35,12 +35,11 @@
                             <table id="assets-table" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th style="width: 5%;">#</th>
+                                    <th>#</th>
                                     <th>Tag</th>
-                                    <th>Thể loại</th>
                                     <th>Model</th>
                                     <th>Vị trí</th>
-                                    <th>Nhân viên</th>
+                                    <th style="width: 20%;">Nhân viên</th>
                                     <th>Trạng thái</th>
                                     <th style="width: 16%;">Thao tác</th>
                                 </tr>
@@ -87,14 +86,14 @@
                 extend: 'copy',
                 footer: true,
                 exportOptions: {
-                    columns: [0,1,2,3,4,5,6]
+                    columns: [0,1,2,3,4]
                 }
             },
             {
                 extend: 'csv',
                 footer: true,
                 exportOptions: {
-                    columns: [0,1,2,3,4,5,6]
+                    columns: [0,1,2,3,4]
                 }
 
             },
@@ -102,28 +101,28 @@
                 extend: 'excel',
                 footer: true,
                 exportOptions: {
-                    columns: [0,1,2,3,4,5,6]
+                    columns: [0,1,2,3,4]
                 }
             },
             {
                 extend: 'pdf',
                 footer: true,
                 exportOptions: {
-                    columns: [0,1,2,3,4,5,6]
+                    columns: [0,1,2,3,4]
                 }
             },
             {
                 extend: 'print',
                 footer: true,
                 exportOptions: {
-                    columns: [0,1,2,3,4,5,6]
+                    columns: [0,1,2,3,4]
                 }
             },
             {
                 extend: 'colvis',
                 footer: true,
                 exportOptions: {
-                    columns: [0,1,2,3,4,5,6]
+                    columns: [0,1,2,3,4]
                 }
             }
         ],
@@ -132,7 +131,6 @@
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
             {data: 'tag', name: 'tag'},
-            {data: 'category', name: 'category'},
             {data: 'model', name: 'model'},
             {data: 'area', name: 'area'},
             {data: 'employee', name: 'employee'},
