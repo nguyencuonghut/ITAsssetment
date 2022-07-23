@@ -9,6 +9,7 @@ use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\AdminAreasController;
 use App\Http\Controllers\AdminAssetModelsController;
 use App\Http\Controllers\AdminAssetsController;
+use App\Http\Controllers\AdminAuditsController;
 use App\Http\Controllers\AdminCategoriesController;
 use App\Http\Controllers\AdminDepartmentsController;
 use App\Http\Controllers\AdminEmployeesController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\AdminManufacturersController;
 use App\Http\Controllers\AdminSuppliersController;
 use App\Http\Controllers\UserActivityLogsController;
 use App\Http\Controllers\UserAssetsController;
+use App\Http\Controllers\UserAuditsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,6 +72,10 @@ Route::name('admin.')->prefix('admin')->group(function() {
         Route::resource('assets', AdminAssetsController::class);
         Route::get('assets/changeStatus/{id}', [AdminAssetsController::class, 'getChangeStatus'])->name('assets.getChangeStatus');
         Route::patch('assets/changeStatus/{id}', [AdminAssetsController::class, 'updateStatus'])->name('assets.updateStatus');
+
+        Route::get('audits/audit', [AdminAuditsController::class, 'audit'])->name('audits.audit');
+        Route::patch('audits/doAudit', [AdminAuditsController::class, 'doAudit'])->name('audits.doAudit');
+        Route::get('audits/data', [AdminAuditsController::class, 'anyData'])->name('audits.data');
     });
 });
 
@@ -88,6 +94,11 @@ Route::get('assets', [UserAssetsController::class, 'index'])->name('assets.index
 Route::get('assets/createQR/{id}', [UserAssetsController::class, 'createQR'])->name('assets.createQR');
 
 Route::get('logs/data', [UserActivityLogsController::class, 'anyData'])->name('logs.data');
+
+Route::get('audits/confirmation/{id}/{token}', [UserAuditsController::class, 'confirmation'])->name('audits.confirmation');
+Route::patch('audits/doConfirmation', [UserAuditsController::class, 'doConfirmation'])->name('audits.doConfirmation');
+Route::get('audits/index', [UserAuditsController::class, 'index'])->name('audits.index');
+Route::get('audits/data', [UserAuditsController::class, 'anyData'])->name('audits.data');
 
 Route::get('/', [UserHomeController::class, 'home'])->name('home');
 

@@ -229,7 +229,7 @@ class AdminAssetsController extends Controller
                 return $assets->area->name;
             })
             ->editColumn('employee', function ($assets) {
-                return $assets->employee->name;
+                return $assets->employee->email;
             })
             ->editColumn('status', function ($assets) {
                 if($assets->status == 'Đã cấp phát') {
@@ -256,7 +256,10 @@ class AdminAssetsController extends Controller
                            <input type="hidden" name="_token" value="' . csrf_token(). '"></form>';
                 return $action;
             })
-            ->rawColumns(['tag', 'status', 'actions'])
+            ->editColumn('check', function ($assets) {
+                return '<input type="checkbox" name=asset_ids[]" value="' . $assets->id . '">';
+            })
+            ->rawColumns(['tag', 'status', 'actions', 'check'])
             ->make(true);
     }
 

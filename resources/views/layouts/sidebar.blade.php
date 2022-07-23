@@ -44,6 +44,12 @@
               <p>Tài sản</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('audits.index') }}" class="nav-link {{ Request::is('audits*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-clipboard-check"></i>
+              <p>Kiểm kê</p>
+            </a>
+          </li>
           @endauth
 
           @auth('admin')
@@ -52,6 +58,12 @@
             <a href="{{ route('admin.assets.index') }}" class="nav-link {{ Request::is('admin/assets*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-barcode"></i>
               <p>Tài sản</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('admin.audits.audit') }}" class="nav-link {{ Request::is('admin/audits*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-clipboard-check"></i>
+              <p>Kiểm kê</p>
             </a>
           </li>
           <li class="nav-item">
